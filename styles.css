@@ -1,0 +1,63 @@
+body {
+    background: radial-gradient(circle, #1e3c72, #2a5298, #19385b); /* Градиентный фон в стиле Base */
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Чтобы пузырьки не выходили за границы экрана */
+}
+
+h1.title {
+    font-size: 32px; /* Уменьшенный размер заголовка */
+    font-weight: 900;
+    margin: 20px 0;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.score {
+    font-size: 16px; /* Уменьшенный размер для счета */
+    color: #f0f0f0;
+    margin: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.bubble-container {
+    position: relative;
+    width: 100vw;
+    height: 85vh; /* Немного увеличенная высота, чтобы разместить больше пузырьков */
+    overflow: hidden; /* Ограничивает движение пузырьков */
+}
+
+.bubble {
+    position: absolute;
+    width: 27px; /* Размер пузырька */
+    height: 27px;
+    border-radius: 50%;
+    background-size: cover;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.bubble.whale {
+    background-image: url('whale.png'); /* Изображение синего кита */
+}
+
+.bubble.cypherpepe {
+    background-image: url('cypherpepe.png'); /* Изображение cypherpepe */
+}
+
+.bubble.lastking {
+    background-image: url('lastking161.png'); /* Изображение lastking161 */
+}
+
+.bubble.pop {
+    animation: pop 0.3s forwards; /* Быстрое лопание пузырька */
+}
+
+@keyframes pop {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(0); opacity: 0; }
+}
